@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Tempo Juntos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Tela Inicial -->
+    <div class="home-screen">
+        <h1>Nosso Tempo Juntos</h1>
+        <img src="ursos-abraco.webp" id="bear-hug" alt="Um panda abraçando um urso marrom">
+        <button class="btn" id="startBtn">Ver Nosso Contador</button>
+    </div>
+
+    <!-- Tela do Contador -->
+    <div class="counter-screen" id="counterScreen">
+        <h1 class="gradient-text">
+        <span class="linha1">Estamos vivendo</span><br>
+        <span class="linha2">esse amor há</span>
+    </h1>
+        
+        <div class="counter neon-text">
+            <div class="counter-display" id="counterDisplay"></div>
+            <div class="counter-details">
+                <div class="counter-item">
+                    <div class="counter-number" id="years"></div>
+                    <div class="counter-label">Anos</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number" id="months"></div>
+                    <div class="counter-label">Meses</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number" id="days"></div>
+                    <div class="counter-label">Dias</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number" id="hours"></div>
+                    <div class="counter-label">Horas</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number" id="minutes"></div>
+                    <div class="counter-label">Minutos</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number" id="seconds"></div>
+                    <div class="counter-label">Segundos</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="photo-carousel">
+            <div><img src="https://picsum.photos/600/600" alt="Nossa Foto 1"></div>
+            <div><img src="https://picsum.photos/600/600" alt="Nossa Foto 2"></div>
+            <div><img src="https://picsum.photos/600/600" alt="Nossa Foto 3"></div>
+            <div><img src="https://picsum.photos/600/600" alt="Nossa Foto 4"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
