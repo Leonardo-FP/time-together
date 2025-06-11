@@ -23,47 +23,59 @@
         <span class="linha1">Estamos vivendo</span><br>
         <span class="linha2">esse amor há</span>
     </h1>
-        
-        <div class="counter neon-text">
-            <div class="counter-display" id="counterDisplay"></div>
-            <div class="counter-details">
-                <div class="counter-item">
-                    <div class="counter-number" id="years"></div>
-                    <div class="counter-label">Anos</div>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-number" id="months"></div>
-                    <div class="counter-label">Meses</div>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-number" id="days"></div>
-                    <div class="counter-label">Dias</div>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-number" id="hours"></div>
-                    <div class="counter-label">Horas</div>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-number" id="minutes"></div>
-                    <div class="counter-label">Minutos</div>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-number" id="seconds"></div>
-                    <div class="counter-label">Segundos</div>
-                </div>
+    
+    <div class="counter neon-text">
+        <div class="counter-display" id="counterDisplay"></div>
+        <div class="counter-details">
+            <div class="counter-item">
+                <div class="counter-number" id="years"></div>
+                <div class="counter-label">Anos</div>
+            </div>
+            <div class="counter-item">
+                <div class="counter-number" id="months"></div>
+                <div class="counter-label">Meses</div>
+            </div>
+            <div class="counter-item">
+                <div class="counter-number" id="days"></div>
+                <div class="counter-label">Dias</div>
+            </div>
+            <div class="counter-item">
+                <div class="counter-number" id="hours"></div>
+                <div class="counter-label">Horas</div>
+            </div>
+            <div class="counter-item">
+                <div class="counter-number" id="minutes"></div>
+                <div class="counter-label">Minutos</div>
+            </div>
+            <div class="counter-item">
+                <div class="counter-number" id="seconds"></div>
+                <div class="counter-label">Segundos</div>
             </div>
         </div>
-        
-        <div class="photo-carousel">
-            <div><img src="https://picsum.photos/600/600" alt="Nossa Foto 1"></div>
-            <div><img src="https://picsum.photos/600/600" alt="Nossa Foto 2"></div>
-            <div><img src="https://picsum.photos/600/600" alt="Nossa Foto 3"></div>
-            <div><img src="https://picsum.photos/600/600" alt="Nossa Foto 4"></div>
+    </div>
+
+    <!-- Player de música -->
+    <div class="music-player">
+        <button id="playBtn"><i class="fas fa-play"></i></button>
+        <button id="pauseBtn"><i class="fas fa-pause"></i></button>
+        <div class="progress-container">
+            <input type="range" id="progressBar" value="0" min="0" max="100" step="0.1">
         </div>
+        <span class="now-playing">Tocando: "Nossa música"</span>
+    </div>
+
+    <!-- Carrosel de fotos -->
+    <div class="photo-carousel">
+        <div><img src="https://picsum.photos/600/600" alt="Nossa Foto 1"></div>
+        <div><img src="https://picsum.photos/600/600" alt="Nossa Foto 2"></div>
+        <div><img src="https://picsum.photos/600/600" alt="Nossa Foto 3"></div>
+        <div><img src="https://picsum.photos/600/600" alt="Nossa Foto 4"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="music.js"></script>
 </body>
 </html>
