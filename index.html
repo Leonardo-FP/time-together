@@ -14,9 +14,15 @@
     <div class="home-screen">
         <h1>Nosso Tempo Juntos</h1>
         <img src="ursos-abraco.webp" id="bear-hug" alt="Um panda abraçando um urso marrom">
-        <button class="btn" id="startBtn">Ver Nosso Contador</button>
+        <button class="btn" id="startBtn">Ver Nossa História</button>
     </div>
 
+    <!-- Tela de Loading -->
+    <div id="loadingScreen" class="loading-screen" style="display: none;">
+        <h2>Carregando nossas lembranças... 💖</h2>
+        <div class="spinner"></div>
+    </div>
+    
     <!-- Tela do Contador -->
     <div class="counter-screen" id="counterScreen">
         <h1 class="gradient-text">
@@ -56,20 +62,31 @@
 
     <!-- Player de música -->
     <div class="music-player">
-        <button id="playBtn"><i class="fas fa-play"></i></button>
-        <button id="pauseBtn"><i class="fas fa-pause"></i></button>
-        <div class="progress-container">
-            <input type="range" id="progressBar" value="0" min="0" max="100" step="0.1">
+        <div class="controls">
+            <button id="playBtn"><i class="fas fa-play"></i></button>
+            <button id="pauseBtn"><i class="fas fa-pause"></i></button>
+            <div class="progress-container">
+                <input type="range" id="progressBar" value="0" min="0" max="100" step="0.1">
+            </div>
         </div>
         <span class="now-playing">Tocando: "Nossa música"</span>
     </div>
 
     <!-- Carrosel de fotos -->
     <div class="photo-carousel">
-        <div><img src="https://picsum.photos/600/600" alt="Nossa Foto 1"></div>
-        <div><img src="https://picsum.photos/600/600" alt="Nossa Foto 2"></div>
-        <div><img src="https://picsum.photos/600/600" alt="Nossa Foto 3"></div>
-        <div><img src="https://picsum.photos/600/600" alt="Nossa Foto 4"></div>
+        <div><img src="fotos/beijo.jpg" width="600" height="600" alt="Nossa Foto 1"></div>
+        <div><img src="fotos/hamburgueria.jpg" width="600" height="600" alt="Nossa Foto 2"></div>
+        <div><img src="fotos/show.jpg" width="600" height="600" alt="Nossa Foto 3"></div>
+        <div><img src="fotos/anonovo.jpg" width="600" height="600" alt="Nossa Foto 4"></div>
+        <div><img src="fotos/natal.jpg" width="600" height="600" alt="Nossa Foto 5"></div>
+        <div><img src="fotos/minas.jpg" width="600" height="600" alt="Nossa Foto 6"></div>
+        <div><img src="fotos/aniversario.jpg" width="600" height="600" alt="Nossa Foto 7"></div>
+    </div>
+
+    <div class="love-message">
+        <p class="text">"A vida ao seu lado ganha outro sentido, outro motivo, outro sabor.</p>
+        <p class="text" style="text-align: right;">Que nosso amor seja eterno enquanto durar."</p>
+        <p>Leonardo, 2025</p>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

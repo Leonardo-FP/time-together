@@ -25,6 +25,10 @@ const sound = new Howl({
     }
 });
 
+// Configura o volume do áudio e o fade in
+sound.volume(0);          // Começa mudo
+sound.fade(0, 0.6, 10000); // Vai até 0.3 em 10 segundos
+
 progressBar.addEventListener('input', () => {
     const duration = sound.duration();
     const newTime = (progressBar.value / 100) * duration;

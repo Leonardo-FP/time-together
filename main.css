@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -178,15 +176,25 @@ body {
     border-radius: 30px;
     padding: 15px 25px;
     display: flex;
+    flex-direction: column; /* coluna pra texto embaixo */
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    gap: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     margin: 30px auto;
     width: fit-content;
     color: white;
 }
 
+/* Container dos controles na mesma linha */
+.music-player .controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px; /* limite pra barra não ficar gigante */
+}
+
+/* Botões play/pause lado a lado */
 .music-player button {
     background: none;
     border: none;
@@ -194,21 +202,24 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
     transition: transform 0.2s;
+    flex-shrink: 0; /* não encolher */
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }
 
 .music-player button:hover {
     transform: scale(1.2);
 }
 
-.now-playing {
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-}
-
+/* Barra de progresso ocupa o espaço restante */
 .progress-container {
-    flex: 1;
-    margin: 0 10px;
+    flex-grow: 1;
+    min-width: 150px;
+    width: 100%;
 }
 
 #progressBar {
@@ -237,6 +248,68 @@ body {
     background: #ff4e6d;
     border-radius: 50%;
     cursor: pointer;
+}
+
+/* Texto embaixo, centralizado */
+.now-playing {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Loading Screen */
+.loading-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.spinner {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #ff69b4;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-top: 20px;
+}
+
+.love-message {
+    max-width: 600px;
+    margin: 40px 30px;
+    padding: 20px 30px;
+    border-radius: 25px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    box-shadow: 0 8px 20px rgba(255, 78, 109, 0.5);
+    text-align: left;
+    user-select: none; /* pra parecer algo fixo e não editável */
+    white-space: pre-line; /* respeita quebras de linha no texto */
+}
+
+.text {
+    font-style: italic;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 @keyframes fall {
@@ -271,6 +344,10 @@ body {
         font-size: 2.2rem;
     }
 
+    .home-screen button {
+        font-size: 1.4rem;
+    }
+
     .counter-display {
         font-size: 1.2rem;
     }
@@ -297,5 +374,38 @@ body {
 
     .counter-label {
         font-size: 0.9rem;
+    }
+
+    .music-player {
+        width: 350px;
+        padding: 15px 20px;
+    }
+
+    .music-player .controls {
+        gap: 10px;
+    }
+
+    .music-player button {
+        width: 42px;
+        height: 42px;
+        font-size: 1.3rem;
+    }
+
+    .progress-container {
+        min-width: auto;
+    }
+
+    .now-playing {
+        font-size: 1.1rem;
+    }
+    
+    #loadingScreen h2 {
+        font-size: 1.2rem;
+    }
+
+    .love-message {
+        padding: 15px 20px;
+        font-size: 1rem;
+        margin-bottom: 30px;
     }
 }
